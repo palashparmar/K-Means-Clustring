@@ -9,7 +9,7 @@ This K-Means algorithm is based on Llyods algorithm which have two steps, Assign
 include *kmeans.h* header file into your program. It contains all the necessary header files and function definitions. <br>
 **File reader wrapper:**
 ```
-float** read_file(  char *filename,                //in  : data filename
+float** read_file(  char *filename,                 //in  : data filename
                     size_t *nObjects,               //out : no. of datapoints
                     size_t *nFeatures)              //out : no. of features
 //returns pointer to data objects of size [nObjectsPerRank][nFeatures]
