@@ -51,20 +51,14 @@ Max. number of features (columns) : 1024 <br>
 **Note**<br>
 There is strict limitation of feature size to be at max. 1024, however, number of data-point can be further increased by little improvisation in the algorithm. Instead of processing all the data at a time, data can be processed in batches on the GPU, but this solution will cost in terms of performance. **The best idea would be to increase the number of compute nodes to process more data at a time.**
 
-## Comparision / Result
-![alt text](picture/K-Means-R1.png)
-![alt text](picture/K-Means-R2.png)
-![alt text](picture/K-Means-R3.png)
+
 
 ## Sample Program
 ```
 #include "kmeans.h"
 
 int main() {
-    MPI_Init(NULL, NULL);
-    int rank, nranks;
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORKD, &nranks);
+
     char *filename = "data.txt";
     float **objects, **clusters;
     int *membership;
@@ -81,13 +75,12 @@ int main() {
     if(time==-1)
         return -1;
 
-    size_t i;
+
     free(objects[0]);
     free(clusters[0]);
     free(objects);
     free(clusters);
     free(membership);
 
-    MPI_Finalize();
 }
 ```
