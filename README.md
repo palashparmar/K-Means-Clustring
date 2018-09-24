@@ -1,15 +1,15 @@
 # K-Means algorithm:
-This K-Means algorithm is based on Llyods algorithm which have two steps, Assignment and Update. Both the step are implementated for Nvidia GPUs (in CUDA).
+This K-Means algorithm is based on Llyods algorithm which have two steps, Assignment and Update. Both the step are implemented for Nvidia GPUs (in CUDA).
 
 ## Includes
-* K-Means wrapper for calculating the cluster allocation for all datapoints and also the cluster centers.
+* K-Means wrapper for calculating the cluster allocation for all data points and also the cluster centers.
 * File reader wrapper which enables read data specific to them.
 
 ## Usage
-include *kmeans.h* header file into your program. It contains all the necessary header files and function definations. <br>
+include *kmeans.h* header file into your program. It contains all the necessary header files and function definitions. <br>
 **File reader wrapper:**
 ```
-float** read_file(  char *fileneame,                //in  : data filename
+float** read_file(  char *filename,                //in  : data filename
                     size_t *nObjects,               //out : no. of datapoints
                     size_t *nFeatures)              //out : no. of features
 //returns pointer to data objects of size [nObjectsPerRank][nFeatures]
